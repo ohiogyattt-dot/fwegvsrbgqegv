@@ -1,25 +1,26 @@
-class PesananJoki:
-    def __init__(self, nama_klien, jenis_joki, harga, status="Proses"):
-        self.nama_klien = nama_klien
-        self.jenis_joki = jenis_joki
-        self.harga = harga
-        self.status = status
+class RatingHotel:
+    def __init__(self, nama_hotel, kota, rating, jumlah_ulasan, kategori="Bintang 4"):
+        self.nama_hotel = nama_hotel
+        self.kota = kota
+        self.rating = rating
+        self.jumlah_ulasan = jumlah_ulasan
+        self.kategori = kategori
 
     def to_list(self):
-        return [self.nama_klien, self.jenis_joki, self.harga, self.status]
+        return [self.nama_hotel, self.kota, self.rating, self.jumlah_ulasan, self.kategori]
 
     def __str__(self):
-        return f"{self.nama_klien} - {self.jenis_joki} (Rp{self.harga}) - {self.status}"
+        return f"{self.nama_hotel} ({self.kota}) - Rating: {self.rating}/5.0 ({self.jumlah_ulasan} ulasan) - {self.kategori}"
 
 
-class Pelanggan:
-    def __init__(self, id_pelanggan, nama, no_hp):
-        self.id = id_pelanggan
+class Pengulas:
+    def __init__(self, id_pengulas, nama, email):
+        self.id = id_pengulas
         self.nama = nama
-        self.no_hp = no_hp
+        self.email = email
 
     def to_list(self):
-        return [self.id, self.nama, self.no_hp]
+        return [self.id, self.nama, self.email]
 
     def __str__(self):
-        return f"{self.nama} ({self.id}) - {self.no_hp}"
+        return f"{self.nama} ({self.id}) - {self.email}"
